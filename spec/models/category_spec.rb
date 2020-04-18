@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Artist, type: :model do
+RSpec.describe Category, type: :model do
   describe 'validations' do
-    subject { build(:artist) }
+    subject { build(:category) }
 
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_uniqueness_of(:name) }
