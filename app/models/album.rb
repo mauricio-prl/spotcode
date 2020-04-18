@@ -6,4 +6,5 @@ class Album < ApplicationRecord
   validates :date, presence: true
 
   has_many :songs
+  has_many :recently_heards
 end
