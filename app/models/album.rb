@@ -7,4 +7,5 @@ class Album < ApplicationRecord
 
   has_many :songs
   has_many :recently_heards
+  has_one_attached :cover
 end

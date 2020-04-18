@@ -11,4 +11,10 @@ RSpec.describe Artist, type: :model do
   describe 'associations' do
     it { is_expected.to have_many(:albums) }
   end
+
+  describe '#photo' do
+    subject { create(:artist, :with_photo).photo }
+
+    it { is_expected.to be_an_instance_of(ActiveStorage::Attached::One) }
+  end
 end

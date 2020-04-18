@@ -11,4 +11,10 @@ RSpec.describe Album, type: :model do
     it { is_expected.to have_many(:songs) }
     it { is_expected.to have_many(:recently_heards) }
   end
+
+  describe '#cover' do
+    subject { create(:album, :with_cover).cover }
+
+    it { is_expected.to be_an_instance_of(ActiveStorage::Attached::One) }
+  end
 end

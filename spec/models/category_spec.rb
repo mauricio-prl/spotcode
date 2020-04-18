@@ -11,4 +11,10 @@ RSpec.describe Category, type: :model do
   describe 'associations' do
     it { is_expected.to have_many(:albums) }
   end
+
+  describe '#image' do
+    subject { create(:category, :with_image).image }
+
+    it { is_expected.to be_an_instance_of(ActiveStorage::Attached::One) }
+  end
 end
