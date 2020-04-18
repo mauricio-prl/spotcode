@@ -1,24 +1,5 @@
-# README
+# SpotCode
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Spotcode is an app, I'm making to learn how to work with rails and rspec together.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It's based on Spotify app. And it is a course from [OneBitCode](https://onebitcode.com/).
