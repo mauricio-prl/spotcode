@@ -4,4 +4,6 @@ class Album < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
   validates :date, presence: true
+
+  has_many :songs
 end
