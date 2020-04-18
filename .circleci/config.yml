@@ -21,15 +21,28 @@ jobs:
           keys:
             - rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
             - rails-demo-bundle-v2-
+            - yarn-packages-{{ checksum "yarn.lock" }}
+
       - run:
           name: Bundle Install
           command: |
             bundle check --path vendor/bundle || gem install bundler:2.1.2
             bundle install
+      - run:
+          name: Yarn
+          command: yarn install --frozen-lockfile
+
       - save_cache:
           key: rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
