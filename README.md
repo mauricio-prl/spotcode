@@ -1,5 +1,4 @@
 [![CircleCI](https://circleci.com/gh/m-pereira/spotcode.svg?style=svg)](https://circleci.com/gh/m-pereira/spotcode)
-
 [![Coverage Status](https://coveralls.io/repos/github/m-pereira/spotcode/badge.svg?branch=master)](https://coveralls.io/github/m-pereira/spotcode?branch=master)
 
 # SpotCode
