@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_18_150202) do
+ActiveRecord::Schema.define(version: 2020_04_18_150640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,16 @@ ActiveRecord::Schema.define(version: 2020_04_18_150202) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "favoritable_type", null: false
+    t.bigint "favoritable_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["favoritable_type", "favoritable_id"], name: "index_favorites_on_favoritable_type_and_favoritable_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
   create_table "recently_heards", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "album_id", null: false
@@ -92,6 +102,7 @@ ActiveRecord::Schema.define(version: 2020_04_18_150202) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "albums", "artists"
   add_foreign_key "albums", "categories"
+  add_foreign_key "favorites", "users"
   add_foreign_key "recently_heards", "albums"
   add_foreign_key "recently_heards", "users"
   add_foreign_key "songs", "albums"
