@@ -19,6 +19,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'fuubar'
+  gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop'
 end
