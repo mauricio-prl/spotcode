@@ -6,7 +6,7 @@ RSpec.describe Api::V1::DashboardController, type: :request do
   before { sign_in user }
 
   describe 'GET #index' do
-    subject { get '/api/v1/dashboard' }
+    subject { get api_v1_dashboard_index_path }
 
     it 'has http status ok' do
       subject
@@ -30,7 +30,7 @@ RSpec.describe Api::V1::DashboardController, type: :request do
   end
 
   describe '#load_recent_heard' do
-    subject { get '/api/v1/dashboard' }
+    subject { get api_v1_dashboard_index_path }
 
     it 'calls RecentAlbumsFinder' do
       allow(RecentAlbumsFinder).to receive(:call).with(user)
@@ -43,7 +43,7 @@ RSpec.describe Api::V1::DashboardController, type: :request do
   describe '#load_recommendations' do
     let(:category) { create(:category) }
 
-    subject { get '/api/v1/dashboard' }
+    subject { get api_v1_dashboard_index_path }
 
     it 'calls RecentAlbumsFinder' do
       allow(RecommendationsLoader).to receive(:call)

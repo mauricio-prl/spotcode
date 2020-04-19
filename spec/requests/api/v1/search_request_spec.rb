@@ -6,7 +6,7 @@ RSpec.describe Api::V1::SearchController, type: :request do
   before { sign_in(user) }
 
   describe 'GET #index' do
-    subject { get '/api/v1/search' }
+    subject { get api_v1_search_index_path }
 
     it 'has http status ok' do
       subject
