@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Navbar, Container, Columns } from 'react-bulma-components';
+import { Navbar, Container, Columns, Button } from 'react-bulma-components';
 import logoImage from '../../../assets/images/logo.png';
 import styled from 'styled-components';
  
@@ -20,6 +20,9 @@ const Menu = () => {
               <img src={logoImage} className='image'/>
             </Columns.Column>
             <Columns.Column>
+              <a href='/users/sign_in' className='is-pulled-right is-right'>
+                <Button outlined={true} color='white'>LOGIN</Button>
+              </a>
             </Columns.Column>
           </ColumnsFullWidth>
         </Container>
