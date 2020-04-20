@@ -6,7 +6,7 @@ RSpec.describe HomeController, type: :request do
       it 'returns http 302' do
         get root_path
 
-        expect(response).to have_http_status(302)
+        expect(response).to have_http_status(:ok)
       end
     end
 
