@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
+import { Columns, Heading } from 'react-bulma-components';
 import Album from '../album';
 import styled from 'styled-components';
-import { Columns, Heading } from 'react-bulma-components';
 
 const SpacedDiv = styled.div`
   margin-top: 50px;
