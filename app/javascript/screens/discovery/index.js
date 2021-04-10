@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import SectionWrapper from '../../components/common/section_wrapper'
+import SectionWrapper from '../../components/common/section_wrapper';
 import NavbarFooter from '../../components/common/navbar_footer';
 import Discovery from '../../components/discovery';
 
 const DiscoveryScreen = () => {
-  return(
+  return (
     <Fragment>
       <SectionWrapper>
         <Discovery />
@@ -12,6 +12,6 @@ const DiscoveryScreen = () => {
       <NavbarFooter />
     </Fragment>
   );
-}
+};
 
 export default DiscoveryScreen;

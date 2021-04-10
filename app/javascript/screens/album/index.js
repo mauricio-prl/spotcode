@@ -7,11 +7,11 @@ const AlbumScreen = () => {
   return (
     <Fragment>
       <SectionWrapper>
-        <Albums/>
-        <NavbarFooter/>
+        <Albums />
+        <NavbarFooter />
       </SectionWrapper>
     </Fragment>
-  )
-}
+  );
+};
 
 export default AlbumScreen;
