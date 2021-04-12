@@ -6,14 +6,14 @@ import 'react-bulma-components/dist/react-bulma-components.min.css';
 import 'app.scss';
 
 const App = () => {
-  return(
+  return (
     <Fragment>
       <BrowserRouter>
-        <Menu/>
-        <Routes/>
+        <Menu />
+        <Routes />
       </BrowserRouter>
     </Fragment>
   );
-}
+};
 
 export default App;
