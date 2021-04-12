@@ -7,7 +7,13 @@ const PlaySequenceButton = styled(Button)`
   margin-bottom: 30px;
 `;
 
-const Musics = (props) => {
+const Musics = ({ songs, artist_name } = props) => {
+  const songs_components = songs.map((song, key) => (
+    <Columns.Column desktop={{ size: 6 }} mobile={{ size: 12 }} key={key}>
+      <Music song={song} artist_name={artist_name} />
+    </Columns.Column>
+  ));
+
   return (
     <Fragment>
       <Columns className='is-mobile is-centered'>
@@ -21,8 +27,9 @@ const Musics = (props) => {
           </PlaySequenceButton>
         </Columns.Column>
       </Columns>
-      <Music />
-      <Music />
+      {songs_components.length > 0 && (
+        <Columns className='is-mobile'>{songs_components}</Columns>
+      )}
     </Fragment>
   );
 };

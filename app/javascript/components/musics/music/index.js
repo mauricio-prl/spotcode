@@ -12,7 +12,7 @@ const CustomSubHeading = styled(Heading)`
   margin-bottom: 0px !important;
 `;
 
-const Music = (props) => {
+const Music = ({ song, artist_name } = props) => {
   return (
     <Fragment>
       <Columns className='is-vcentered is-mobile is-centered'>
@@ -23,10 +23,10 @@ const Music = (props) => {
           <Columns className='is-vcentered is-mobile'>
             <Columns.Column desktop={{ size: 8 }} mobile={{ size: 8 }}>
               <Heading size={5} className='has-text-white'>
-                Title
+                {song.title}
               </Heading>
               <CustomSubHeading size={6} className='has-text-white' subtitle>
-                Artist Name
+                {artist_name}
               </CustomSubHeading>
             </Columns.Column>
             <Columns.Column
